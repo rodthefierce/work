@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2ED8622-1A89-4F9F-91F4-53AFADD52577}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NiceProcessingMacros</RootNamespace>
+    <AssemblyName>NiceProcessingMacros</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Attachmate.Reflection, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.Emulation.IbmHosts, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.Emulation.OpenSystems, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.Framework, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.UserControl.IbmHosts, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.UserControl.OpenSystems, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.UserControl.OpenSystemsGraphics, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.UserControl.wpf.IbmHosts, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.UserControl.wpf.OpenSystems, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="Attachmate.Reflection.UserControl.wpf.OpenSystemsGraphics, Version=1.2.0.0, Culture=neutral, PublicKeyToken=13bff1b6907eadcf, processorArchitecture=MSIL" />
+    <Reference Include="MaterialMenu, Version=0.0.4.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialMenu.0.0.4.5\lib\net46\MaterialMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Models\CreateDictionaries.cs" />
+    <Compile Include="Models\ER189\CreateLists.cs" />
+    <Compile Include="Models\ER189\DetailAdjustmentScreenScenarios.cs" />
+    <Compile Include="Models\ER189\FrontScreenScenarios.cs" />
+    <Compile Include="Models\Hospice\CommentScreenScenarios.cs" />
+    <Compile Include="Models\Hospice\CreateLists.cs" />
+    <Compile Include="Models\Hospice\FrontScreenScenarios.cs" />
+    <Compile Include="Models\Hospice\SHInquiryScreenScenarios.cs" />
+    <Compile Include="Models\RCP\CreateLists.cs" />
+    <Compile Include="Models\RCP\FrontScreenScenarios.cs" />
+    <Compile Include="Models\RCP\PC145ScreenScenarios.cs" />
+    <Compile Include="Models\RCP\Screen10Scenarios.cs" />
+    <Compile Include="Models\RCP\Screen11Scenarios.cs" />
+    <Compile Include="Models\RCP\Screen16Scenarios.cs" />
+    <Compile Include="Models\RCP\Screen9Scenarios.cs" />
+    <Compile Include="Models\MacroReporting.cs" />
+    <Compile Include="Models\Screens\Comments.cs" />
+    <Compile Include="Models\Screens\FeeSchedule.cs" />
+    <Compile Include="Models\Screens\UnitedHealthCareMainMenu.cs" />
+    <Compile Include="Models\Screens\PC0145.cs" />
+    <Compile Include="Models\Screens\Screen11.cs" />
+    <Compile Include="Models\Screens\Screen16.cs" />
+    <Compile Include="Models\Screens\ScreenWaitVariables.cs" />
+    <Compile Include="Models\Sequestration\CreateLists.cs" />
+    <Compile Include="Models\Sequestration\DetailAdjustmentScreenScenarios.cs" />
+    <Compile Include="Models\Sequestration\FrontScreenScenarios.cs" />
+    <Compile Include="Models\Sequestration\Screen10Scenarios.cs" />
+    <Compile Include="Models\Sequestration\Screen9Scenarios.cs" />
+    <Compile Include="Models\Sequestration\SeqScenarios\HCFANonPar.cs" />
+    <Compile Include="Models\Sequestration\SeqScenarios\HCFAPar.cs" />
+    <Compile Include="Models\Sequestration\SeqScenarios\UBNonPar.cs" />
+    <Compile Include="Models\Sequestration\SeqScenarios\UBPar.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ER189.xaml.cs">
+      <DependentUpon>ER189.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Hospice.xaml.cs">
+      <DependentUpon>Hospice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LaunchPage.xaml.cs">
+      <DependentUpon>LaunchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PopUpTextBox.xaml.cs">
+      <DependentUpon>PopUpTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RCP.xaml.cs">
+      <DependentUpon>RCP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Sequestration.xaml.cs">
+      <DependentUpon>Sequestration.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UserControls\ER189.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Hospice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LaunchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PopUpTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RCP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Sequestration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\NiceAPI.cs" />
+    <Compile Include="Models\Screens\DetailAdjustmentScreen.cs" />
+    <Compile Include="Models\Screens\FrontScreen.cs" />
+    <Compile Include="Models\Screens\Screen10.cs" />
+    <Compile Include="Models\Screens\Screen9.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Start\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\Images\Hospice\Hospice1.png" />
+    <Resource Include="Content\Images\Misc\QuestionMark.png" />
+    <Resource Include="Content\Images\RCP\RCP1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\Images\Misc\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\Images\Sequestration\Sequestration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\Images\LaunchPage\LaunchPage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ER189Data.txt" />
+    <Resource Include="Resources\Facility.txt" />
+    <Resource Include="Resources\Non Facility.txt" />
+    <Resource Include="Resources\What is a Macro.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\Images\SAM Edit\SAM Edit.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
